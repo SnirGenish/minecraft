@@ -1,0 +1,14 @@
+body {
+  flex-direction: column;
+}
+#inventory {
+  flex-direction: row;
+  width: 100vw;
+  height: 200px;
+}
+@media only screen and (max-width: 430px) {
+  .tool {
+    height: 70px;
+    width: 70px;
+  }
+}

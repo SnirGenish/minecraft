@@ -1,0 +1,70 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#grid {
+  display: grid;
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: repeat(21, 1fr);
+  width: 100vmin;
+  height: 100vmin;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(110, 186, 255, 1) 100%
+  );
+}
+
+.dirt {
+  background: url("/img/dirt.png");
+  background-size: contain;
+}
+.stone {
+  background: url("/img/sotne.png");
+  background-size: contain;
+}
+.wood {
+  background: url("/img/wood.jpg");
+  background-size: contain;
+}
+.leave {
+  background: url("/img/leave.png");
+  background-size: contain;
+}
+.clowd {
+  background-color: rgba(255, 255, 255, 0.491);
+}
+#inventory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  width: 200px;
+  background-color: gray;
+}
+.tool {
+  height: 100px;
+  width: 100px;
+  border: 1px black solid;
+  background-color: rgb(174, 171, 168);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#currentElementBox {
+  border: 1px black solid;
+  height: 70px;
+  width: 70px;
+}
+img {
+  height: 90%;
+}
