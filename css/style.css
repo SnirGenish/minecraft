@@ -24,19 +24,19 @@ body {
 }
 
 .dirt {
-  background: url("/img/dirt.png");
+  background: url("img/dirt.png");
   background-size: contain;
 }
 .stone {
-  background: url("/img/sotne.png");
+  background: url("img/sotne.png");
   background-size: contain;
 }
 .wood {
-  background: url("/img/wood.jpg");
+  background: url("img/wood.jpg");
   background-size: contain;
 }
 .leave {
-  background: url("/img/leave.png");
+  background: url("img/leave.png");
   background-size: contain;
 }
 .clowd {
