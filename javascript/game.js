@@ -7,7 +7,6 @@ let currentElementBox = document.querySelector("#currentElementBox");
 let intro = document.querySelector("#intro");
 let startBtn = document.querySelector("#startBtn");
 let resetBtn = document.querySelector("#reset");
-
 let currentTool = "none";
 let currentElement = "empty";
 
@@ -109,8 +108,19 @@ function paintBoard() {
       grid.append(block);
     }
   }
+  grass();
 }
+
 paintBoard();
+function grass() {
+  let dirtp = document.querySelectorAll(".dirt");
+  for (let i = 0; i < dirtp.length; i++) {
+    const b = dirtp[i];
+    if (b.style.gridRowStart === "16") {
+      b.classList.add("dirtp");
+    }
+  }
+}
 // switch
 // switch
 // switch
@@ -156,6 +166,7 @@ function add() {
           currentTool = "none";
           currentElement = "empty";
           currentElementBox.classList = currentElement;
+          grass();
         }
       });
     }

@@ -76,6 +76,10 @@ body {
 .clowd {
   background-color: rgba(255, 255, 255, 0.491);
 }
+.dirtp {
+  background: url("img/dirtp.jpg");
+  background-size: contain;
+}
 #inventory {
   display: flex;
   flex-direction: column;
