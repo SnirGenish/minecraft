@@ -11,4 +11,7 @@ body {
     height: 70px;
     width: 70px;
   }
+  #logo {
+    margin: 130px 0;
+  }
 }

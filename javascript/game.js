@@ -4,6 +4,9 @@ let axe = document.querySelector("#axe");
 let grid = document.querySelector("#grid");
 let inventory = document.querySelector("#inventory");
 let currentElementBox = document.querySelector("#currentElementBox");
+let intro = document.querySelector("#intro");
+let startBtn = document.querySelector("#startBtn");
+let resetBtn = document.querySelector("#reset");
 
 let currentTool = "none";
 let currentElement = "empty";
@@ -119,7 +122,11 @@ function del(element, tool) {
   for (let i = 0; i < block.length; i++) {
     let b = block[i];
     b.addEventListener("click", () => {
-      if (currentTool === tool && currentElement === "empty") {
+      if (
+        currentTool === tool &&
+        currentElement === "empty" &&
+        b.classList.value !== "empty"
+      ) {
         let r = b.style.gridRowStart;
         let c = b.style.gridColumnStart;
         board[r - 1][c - 1] = e;
@@ -137,7 +144,11 @@ function add() {
     for (let i = 0; i < block.length; i++) {
       const b = block[i];
       b.addEventListener("click", (e) => {
-        if (currentTool === "box" && currentElement !== "empty") {
+        if (
+          currentTool === "box" &&
+          currentElement !== "empty" &&
+          b.classList.value === "empty"
+        ) {
           let r = b.style.gridRowStart;
           let c = b.style.gridColumnStart;
           board[r - 1][c - 1] = currentElement;
@@ -165,4 +176,17 @@ inventory.addEventListener("click", () => {
     case "box":
       add();
   }
+});
+// intro
+// intro
+// intro
+// intro
+startBtn.addEventListener("click", () => {
+  intro.style.animation = "bye 1.5s forwards";
+  setTimeout(() => {
+    intro.style.display = "none";
+  }, 1500);
+});
+resetBtn.addEventListener("click", () => {
+  location.reload();
 });
